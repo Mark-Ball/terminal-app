@@ -20,16 +20,20 @@ Discover Your Spirit Animal includes several animals with distinct personalities
 
 The animals are held in the program as a local array variable, where each element of the array is a hash. Each hash contains two symbols as keys: the name of the animal and a description. The values that are paired with each key are strings. This allows the application to iterate through the hashes within the array looking for the value of the name key, and retrieve the description which is paired with each name. Therefore the correct description is always presented to the user.
 
-#Feature 2
+#Feature 2 - List of questions
 Discover Your Spirit Animal includes several questions which are printed to the screen. These questions describe a scenario and ask the user which of the defined responses they wish to choose. The responses the user gives to these questions determines which spirit animal they are assigned.
 
 Following each question, the application pauses to receive the user's response and then saves that response under a local variable. Each question exists within a loop, which checks if the response was valid. E.g. if the question required a "yes" or "no" response, anything else will print a short error message to the screen and display the same question again. Therefore all questions will be answered with valid responses.
 
-#Feature 3
+#Feature 3 - help option
+Discover Your Spirit Animal includes a help option which explains various options which can assist users in using the application. This information may include general background on the application such as its purpose, and instructions on how to interact with the application when prompted to do so.
 
+The help option is accessed by including --help as an argument when calling discover_your_spirit_animal.rb from the terminal. I.e by typing: ruby discover_your_spirit_animal.rb --help
+
+An if statement is included in discover_your_spirit_animal.rb which queries if ARGV equals "--help" and if so prints the help message to the screen. The application is then terminated, meaning that if the user wishes to use the application, they must call it again without the --help argument.
 
 #User interaction and experience
-help option
+
 
 
 #Control flow diagram
