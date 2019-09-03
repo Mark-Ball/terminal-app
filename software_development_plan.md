@@ -33,10 +33,31 @@ The help option is accessed by including --help as an argument when calling disc
 An if statement is included in discover_your_spirit_animal.rb which queries if ARGV equals "--help" and if so prints the help message to the screen. The application is then terminated, meaning that if the user wishes to use the application, they must call it again without the --help argument.
 
 #User interaction and experience
+User interaction is a simple but important element of Discover Your Spirit Animal.
 
+Upon calling the application, users have the option to display the help menu by passing "--help" as an argument when calling the application, as follows:
+
+                $ruby discover_your_spirit_animal.rb --help
+
+This displays a help message to the screen. The help message explains a general overview of the application, the flow of questions and responses, the error handling, and what the user needs to do at each point to progress through the application. The application terminates after displaying this message, so it must be called again without the --help argument to progress as normal.
+
+After starting the application, users are prompted for responses to various scenarios. For ease of use, the available options are printed to the screen along with the description of the scenario. This informs users of what they need to enter into the terminal to progress through the application.
+
+e.g. EXAMPLE QUESTION HERE
+
+Despite efforts to inform the user of available options, users are free to type any string of characters into the terminal in response to the questions. The possibility of users entering invalid responses will be handled by an if/else statement where the else captures all cases where the input is unexpected. When this happens a message will be displayed to the user explaining that their input was not valid and how to progress, and then the previous question will be presented again.
+
+If a valid response is entered, the response is saved and the next question is presented to the user. This loop continues until valid responses have been provided to all questions. When valid responses have been provided to all questions, the application presents their spirit animal to the user.
+
+e.g. FINAL ANIMAL SCREEN HERE
+
+This is the end of the application.
 
 
 #Control flow diagram
 
+A version of the control flow diagram called "discover_your_spirit_animal_control_flow_diagram.png" can be found in the source directory.
+
+Also available on Github.
 
 #Implementation plan
