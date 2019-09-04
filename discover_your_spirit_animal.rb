@@ -1,15 +1,10 @@
-#questions asked in order
-#aggressiveness and independence variables
-#user responses
-#error handling
-
-require_relative "./scenarios_animals.rb"
 require_relative "./spirit_animal_methods.rb"
 
+#initialising variables
 aggressiveness = 0
 independence = 0
 
-argv_copy = ARGV.map{ |i| i}
+argv_copy = ARGV.map{ |i| i }
 ARGV.clear
 
 if argv_copy.include?("-help")
@@ -48,6 +43,8 @@ loop do
     elsif response.to_i == 2
         independence -= 1
         break
+    elsif response == "exit"
+        exit
     else
         invalid_response(response)
     end
@@ -58,11 +55,16 @@ loop do
     puts(get_scenarios[2])
     response = gets.chomp
     if response.to_i == 1
-        aggressiveness += 1
+        break
+    elsif response.to_i == 2
+        aggressiveness -= 1
         break
     elsif response.to_i == 3
+        aggressiveness -= 2
         independence -= 1
         break
+    elsif response == "exit"
+        exit
     else
         invalid_response(response)
     end
@@ -73,19 +75,31 @@ loop do
     puts(get_scenarios[3])
     response = gets.chomp
     if response.to_i == 1
-        aggressiveness += 2
-        break
-    elsif response.to_i == 2
         aggressiveness += 1
         break
-    elsif response.to_i == 3
+    elsif response.to_i == 2
         break
+    elsif response.to_i == 3
+        aggressiveness -= 1
+        break
+    elsif response == "exit"
+        exit
     else
         invalid_response(response)
     end
 end
 
+p("Aggressiveness: #{aggressiveness}")
+p("Independence: #{independence}")
+#presenting spirit animal
+if aggressiveness >= 0 && independence >= 0
+    animal = "Leopard"
+elsif aggressiveness < 0 && independence >= 0
+    animal = "Koala"
+elsif aggressiveness >= 0 && independence < 0
+    animal = "Dwarf Mongoose"
+else
+    animal = "Capybara"
+end
 
-# puts("line1\nline2")
-p(aggressiveness)
-p(independence)
+p(get_description(animal))
