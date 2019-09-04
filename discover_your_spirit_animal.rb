@@ -6,18 +6,14 @@
 require_relative "./scenarios_animals.rb"
 require_relative "./spirit_animal_methods.rb"
 
-def display_help_message
-    puts("help message here")
-end
-
-#initialising variables
 aggressiveness = 0
 independence = 0
 
-for items in ARGV
-    if items == "-help"
-        display_help_message
-    end
+argv_copy = ARGV.map{ |i| i}
+ARGV.clear
+
+if argv_copy.include?("-help")
+    display_help_message
 end
 
 #welcome message
@@ -30,9 +26,13 @@ loop do
     if response.to_i == 1
         aggressiveness += 1
         break
+    elsif response.to_i == 2
+        break
     elsif response.to_i == 3
         independence += 1
         break
+    elsif response == "exit"
+        exit
     else
         invalid_response(response)
     end
