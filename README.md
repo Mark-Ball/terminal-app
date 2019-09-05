@@ -73,7 +73,7 @@ An example of the result shown to the user is presented below.
 This is the end of the application.
 
 ##Control flow diagram
-![Control Flow Diagram](flow_control_diagram.png)
+![Control Flow Diagram](./documentation/flow_control_diagram.png)
 
 A version of the control flow diagram can be found in the 'documentation' directory, which is in the source directory of the project. It is also available on Github.
 
