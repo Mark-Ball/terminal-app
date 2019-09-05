@@ -104,4 +104,3 @@ else
 end
 
 puts(get_description(animal))
-

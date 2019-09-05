@@ -1,3 +1,4 @@
+# displays help message if the -help option is called
 def options_handler
     argv_copy = ARGV.map{ |i| i }
     ARGV.clear
@@ -7,15 +8,18 @@ def options_handler
     end
 end
 
+#prints help message to the screen
 def display_help_message
     puts("Discover Your Spirit Animal is a fun personality quiz which identifies your spirit animal.\n\nYou will be presented with a description of a situation and a list of options. When prompted, you must select one of the available options by typing the number corresponding to the choice and pressing enter. If you enter something which is not one of the available choices, the question will be presented again. After all questions have been answered your spirit animal will be revealed!\n\nIf you wish to exit the program, you can type \"exit\" into the terminal when prompted for input.")
     exit
 end
 
+# prints a message to the screen informing the user that their input was invalid
 def invalid_response(response)
     puts("\"#{response}\" was not a valid input. Please input a number corresponding to your choice.")
 end
 
+# returns an array of scenarios
 def get_scenarios
     return [
     "You and your friend are at the bar. Your friend accidentally spills his drink on a group of large drunk men. They demand an apology but your friend refuses. An argument begins. He squares up as if to fight them all, then looks to you." + " What do you do?".colorize(:yellow) + "\n\nOptions:\n1. Stand with your friend no matter what\n2. Convince your friend to back down\n3. What friend? I don't even know this guy!",
@@ -25,6 +29,7 @@ def get_scenarios
     ]
 end
 
+# searches the hashes within the array for an animal, returns the description of that animal if found
 def get_description(animal)
     animals = [
         {name: "Dwarf Mongoose", description: "You are the Dwarf Mongoose, Africa's smallest carnivorous mammal. You aren't afraid of a fight, even though you are only 300 grams, and you would never abandon your fellow mongeese."},
@@ -42,6 +47,7 @@ def get_description(animal)
     return description
 end
 
+# prints the argument to the screen as ascii art
 def print_in_ascii(input)
     a = Artii::Base.new
     puts(a.asciify(input))
