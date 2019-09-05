@@ -88,8 +88,28 @@ A version of the control flow diagram can be found in the 'documentation' direct
 Progression through the checklist was tracked using Trello. Status screenshots of the project at various points are presented below.
 
 Day 1 beginning
+
 ![trello_1](./documentation/trello_1.png)
 
+Day 1 end
+
+![trello_2](./documentation/trello_2.png)
+
+Day 2 noon
+
+![trello_3](./documentation/trello_3.png)
+
+Day 2 end
+
+![trello_4](./documentation/trello_4.png)
+
+Day 3 noon
+
+![trello_5](./documentation/trello_5.png)
+
+Day 3 end
+
+![trello_6](./documentation/trello_6.png)
 
 ##Development log
 
