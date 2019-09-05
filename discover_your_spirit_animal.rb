@@ -1,18 +1,15 @@
 require_relative "./spirit_animal_methods.rb"
+require "colorize"
+
 
 #initialising variables
 aggressiveness = 0
 independence = 0
 
-argv_copy = ARGV.map{ |i| i }
-ARGV.clear
-
-if argv_copy.include?("-help")
-    display_help_message
-end
+options_handler
 
 #welcome message
-puts("Welcome to Discover Your Spirit Animal. This application will help you discover what animal spirit lies within.")
+puts("Welcome to " + "Discover Your Spirit Animal".colorize(:red) + ". This application will help you discover what animal spirit lies within.\n\nWhen presented with a list of choices, please type the " + "number".colorize(:magenta) + " corresponding to the choice and press enter.")
 
 #question 1
 loop do
@@ -89,8 +86,6 @@ loop do
     end
 end
 
-p("Aggressiveness: #{aggressiveness}")
-p("Independence: #{independence}")
 #presenting spirit animal
 if aggressiveness >= 0 && independence >= 0
     animal = "Leopard"
