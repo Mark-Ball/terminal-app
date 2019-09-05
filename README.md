@@ -43,7 +43,7 @@ Upon calling the application, users have the option to display the help menu by 
 
 This displays a help message to the screen. The help message explains a general overview of the application, the flow of questions and responses, the error handling, and what the user needs to do at each point to progress through the application. The application terminates after displaying this message, so it must be called again without the -help option to progress as normal.
 
-Once the application is run normally (i.e. without the help option), the first thing the user sees is a welcome message. This message contains a 1-sentence description of the purpose of Discover Your Spirit Animal and short a instruction of how to progress through the application.
+Once the application is run normally (i.e. without the help option), the first thing the user sees is a welcome message. This message contains a 1-sentence description of the purpose of Discover Your Spirit Animal and short instructions of how to progress through the application.
 
 >Welcome to Discover Your Spirit Animal. This application will help you discover what animal spirit lies within
 >
@@ -58,7 +58,7 @@ The user is immediately presented with the first question. This involves a block
 >2. Convince your friend to back down
 >3. What friend? I don't even know this guy!
 
-Despite efforts to inform the user of available options, users are free to type any string of characters into the terminal in response to the questions. The possibility of users entering invalid responses will be handled by an if/else statement where the if and elsif statements handle valid input. The only valid inputs are numbers corresponding to the choice desired, with all other inputs including strings, integers other than those corresponding to choices, floats, and nil considered invalid entries. Invalid entries are handled by the else portion of the if/else statement. When this happens a message will be displayed to the user explaining that their input was not valid and reminding them that they need to enter a number corresponding to a choice to continue, then the previous question will be presented again.
+Despite efforts to inform the user of available options, users are free to type any string of characters into the terminal in response to the questions. The possibility of users entering invalid responses will be handled by an if/else statement where the if and elsif statements handle valid input. The only valid inputs are numbers corresponding to the choice desired, with all other inputs including strings, integers other than those corresponding to choices, and nil considered invalid entries. Invalid entries are handled by the else portion of the if/else statement. When this happens a message will be displayed to the user explaining that their input was not valid and reminding them that they need to enter a number corresponding to a choice to continue, then the previous question will be presented again.
 
 An example of the error message is presented below.
 
@@ -114,6 +114,7 @@ Day 3 end
 ##Development log
 
 Day 2, 04/09/2019
+
 The goals for today were:
 1. Complete all basic features listed on the software development plan, complete manual testing of these features, and correct any errors.
 
@@ -124,6 +125,7 @@ This was completed and manual testing uncovered multiple bugs, which were subseq
 No blockers for these goals were anticipated.
 
 Day 3, 05/09/2019
+
 Yesterday's goal, which was to complete all basic features of the application and the User experience section of this document, was completed successfully.
 
 The goals for today were:
@@ -169,4 +171,3 @@ Additional testing was performed using the gem Rubocop, which checks files for s
 All main features of the application were subject to manual testing. Features of the application were tested by running the application and inputting a series of inputs. When these inputs were valid it was expected that the program would continue. When inputs were invalid it was expected that the program would display a message informing the user that the input was not valid, and present the question again.
 
 The test cases and results are included in the attached spreadsheet: https://github.com/Mark-Ball/terminal-app/blob/master/documentation/Spirit%20Animal%20testing.xlsx
-
