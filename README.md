@@ -136,3 +136,10 @@ The goals for today were:
 4. Create the powerpoint for the presentation.
 
 The only blocker anticipated for this was difficulty in implementing gems due to lacking documentation.
+
+##Running and installing the application
+A file called "create_dist" is included in the git repository. This file copies all files necessary to run the application to a directory called "dist".
+
+The following Ruby gems are required to run the application:
+- colorize (https://rubygems.org/gems/colorize)
+- artii (https://rubygems.org/gems/artii)

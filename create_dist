@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+rm -r dist
+mkdir dist
+cp discover_your_spirit_animal.rb spirit_animal_methods.rb dist
