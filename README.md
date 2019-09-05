@@ -85,6 +85,12 @@ A version of the control flow diagram can be found in the 'documentation' direct
 |2. list of questions|1. Compose list of questions<br />2. Create array of questions<br />3. Put array in separate file, accessible by method<br />4. Call array using require_relative in index file<br />5. Display question to user|High|04/09/2019|
 |3. Help feature|1. Compose help message<br />2. Implement if statement in index.rb|3. Test option with both valid and invalid input|Low|05/09/2019|
 
+Progression through the checklist was tracked using Trello. Status screenshots of the project at various points are presented below.
+
+Day 1 beginning
+![trello_1](./documentation/trello_1.png)
+
+
 ##Development log
 
 Day 2, 04/09/2019
