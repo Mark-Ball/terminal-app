@@ -118,7 +118,7 @@ Day 2, 04/09/2019
 The goals for today were:
 1. Complete all basic features listed on the software development plan, complete manual testing of these features, and correct any errors.
 
-This was completed and manual testing uncovered multiple bugs, which were subsequently corrected. The current iteration of the software has passed all manual tests.
+This was completed and manual testing uncovered multiple bugs, which were subsequently corrected. The current iteration of the application has passed all manual tests.
 
 2. Complete the User experience section of the software development plan. This section had not been completed prior to this point because a prototype of the application was required to describe what the user would see on the screen when they use the application.
 
@@ -140,9 +140,17 @@ The only blocker anticipated for this was difficulty in implementing gems due to
 ##Help
 Discover Your Spirit Animal is written in Ruby, and therefore requires Ruby to be installed on the computer.
 
-A file called "create_dist" is included in the repository, which creates a directory called "dist" and copies all necessary files into it. The application can be run by navigating into the "dist" directory and calling the program using the following input:
+
+A file called "create_dist" is included in the repository, which creates a directory called "dist" and copies the two files necessary to run the application:
+
+- discover_your_spirit_animal.rb
+- spirit_animal_methods.rb
+
+The application can then be run by navigating into the "dist" directory and calling the discover_your_spirit_animal.rb program using the following input:
 
     ruby discover_your_spirit_animal.rb
+
+
 
 Alternatively, information explaining how to use the application can be displayed to the screen by typing the following into the terminal while in the "dist" directory:
 
