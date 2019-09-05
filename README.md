@@ -73,11 +73,12 @@ An example of the result shown to the user is presented below.
 This is the end of the application.
 
 ##Control flow diagram
-![Control FLow Diagram](flow_control_diagram.png)
+![Control Flow Diagram](flow_control_diagram.png)
 
 A version of the control flow diagram can be found in the 'documentation' directory, which is in the source directory of the project. It is also available on Github.
 
 ##Implementation plan
+
 | Feature | Checklist | Priority | Deadline |
 |---------|-----------|----------|----------|
 |1. list of animals|1. Compose list of animals<br />2. Compose list of animal descriptions<br />3. Create array of hashes with names as keys and descriptions as values<br />4. Put array in separate file, accessible by method<br />5. Call method using require_relative in index file | High | 04/09/2019 |
@@ -85,6 +86,7 @@ A version of the control flow diagram can be found in the 'documentation' direct
 |3. Help feature|1. Compose help message<br />2. Implement if statement in index.rb|3. Test option with both valid and invalid input|Low|05/09/2019|
 
 ##Development log
+
 Day 2, 04/09/2019
 The goals for today were:
 1. Complete all basic features listed on the software development plan, complete manual testing of these features, and correct any errors.
