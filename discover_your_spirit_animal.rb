@@ -1,17 +1,19 @@
 require_relative "./spirit_animal_methods.rb"
 require "colorize"
+require "artii"
 
-
-#initialising variables
+# initialising variables
 aggressiveness = 0
 independence = 0
 
 options_handler
 
-#welcome message
-puts("Welcome to " + "Discover Your Spirit Animal".colorize(:red) + ". This application will help you discover what animal spirit lies within.\n\nWhen presented with a list of choices, please type the " + "number".colorize(:magenta) + " corresponding to the choice and press enter.")
+# welcome message
+print_in_ascii("Welcome")
+puts("to " + "Discover Your Spirit Animal".colorize(:red) + ". This application will help you discover what animal spirit lies within.\n\nWhen presented with a list of choices, please type the " + "number".colorize(:magenta) + " corresponding to the choice and press enter.")
 
-#question 1
+# question 1
+print_in_ascii("Question 1")
 loop do
     puts(get_scenarios[0])
     response = gets.chomp
@@ -30,7 +32,8 @@ loop do
     end
 end
 
-#question 2
+# question 2
+print_in_ascii("Question 2")
 loop do
     puts(get_scenarios[1])
     response = gets.chomp
@@ -47,7 +50,8 @@ loop do
     end
 end
 
-#question 3
+# question 3
+print_in_ascii("Question 3")
 loop do
     puts(get_scenarios[2])
     response = gets.chomp
@@ -67,7 +71,8 @@ loop do
     end
 end
 
-#question 4
+# question 4
+print_in_ascii("Question 4")
 loop do
     puts(get_scenarios[3])
     response = gets.chomp
@@ -86,7 +91,8 @@ loop do
     end
 end
 
-#presenting spirit animal
+# presenting spirit animal
+print_in_ascii("You are...")
 if aggressiveness >= 0 && independence >= 0
     animal = "Leopard"
 elsif aggressiveness < 0 && independence >= 0
@@ -97,4 +103,5 @@ else
     animal = "Capybara"
 end
 
-p(get_description(animal))
+puts(get_description(animal))
+

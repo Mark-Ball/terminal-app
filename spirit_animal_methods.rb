@@ -1,5 +1,3 @@
-require "colorize"
-
 def options_handler
     argv_copy = ARGV.map{ |i| i }
     ARGV.clear
@@ -42,4 +40,9 @@ def get_description(animal)
     end
 
     return description
+end
+
+def print_in_ascii(input)
+    a = Artii::Base.new
+    puts(a.asciify(input))
 end
